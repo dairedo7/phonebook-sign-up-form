@@ -1,0 +1,31 @@
+.filter {
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+}
+.filter__field {
+  display: block;
+  width: 100%;
+
+  padding: 15px;
+  border: 1px solid grey;
+  outline: none;
+
+  border: 1px solid rgba(27, 27, 27, 0.12);
+  border-radius: 2px;
+  box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
+    0 1px 5px 0 rgb(0 0 0 / 12%);
+}
+
+.filter__title {
+  color: rgb(98, 248, 248);
+  font-weight: bold;
+}
+
+.filter__title:hover {
+  color: rgb(2, 233, 233);
+}
+
+.filter__field:focus {
+  border: 2px solid rgb(2, 233, 233);
+}

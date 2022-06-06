@@ -1,0 +1,60 @@
+.contact__item {
+  display: flex;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  padding: 15px;
+  transform: scale(1);
+  transition: all 250ms ease-in;
+  box-shadow: 0 3px 1px -2px rgba(24, 23, 23, 0.2);
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+      rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  }
+}
+
+.contact__text {
+  color: rgb(98, 248, 248);
+  transition: color, transform 250ms ease-in;
+
+  &:hover {
+    color: rgb(2, 233, 233);
+    font-weight: bold;
+    transform: scale(1.03);
+  }
+}
+
+.contact__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.delete__btn {
+  display: block;
+  margin-left: auto;
+  padding: 7px 14px;
+  background-color: transparent;
+  color: #000;
+  border: 1px solid grey;
+  border: 1px solid grey;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  transform: scale(1);
+  transition-property: background, color, transform;
+  transition-timing-function: ease-in-out;
+  transition-duration: 350ms;
+}
+
+.delete__btn:hover {
+  transform: scale(1.1);
+  color: #fff;
+  background-color: rgb(21, 75, 223);
+}
+
+.delete__btn:active {
+  background-color: rgb(108, 143, 238);
+}

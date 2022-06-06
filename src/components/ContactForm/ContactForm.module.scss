@@ -1,0 +1,105 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  margin: 0 auto;
+  padding: 40px 25px;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(2, 2, 2, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.submit__btn {
+  background-color: transparent;
+  color: rgba(94, 240, 240, 0.7);
+  cursor: pointer;
+  min-width: 130px;
+  height: 44px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  border: 1px solid grey;
+  border-radius: 22px;
+  transition-property: background, color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 350ms;
+}
+
+.submit__btn:hover {
+  color: #fff;
+  background-color: rgb(2, 233, 233);
+  border: none;
+}
+
+.name__label {
+  position: absolute;
+  left: 25px;
+  top: 10px;
+  display: inline-block;
+  margin-bottom: 4px;
+
+  transition: all 250ms ease-in;
+}
+
+.number__label {
+  position: absolute;
+  left: 25px;
+  top: 10px;
+
+  transition: all 250ms ease-in;
+}
+
+.form__field:not(:placeholder-shown) + .name__label,
+.form__field:not(:placeholder-shown) + .number__label {
+  transform: translateY(-35px);
+  color: rgb(2, 233, 233);
+  font-weight: bold;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 20px;
+  color: rgba(102, 102, 102, 0.6);
+
+  font-size: 16px;
+
+  &:hover {
+    color: rgb(2, 233, 233);
+  }
+  &:focus-within .name__label {
+    position: absolute;
+    font-weight: bold;
+    transform: translateY(-30px);
+    color: rgb(2, 233, 233);
+  }
+  &:focus-within .number__label {
+    position: absolute;
+    font-weight: bold;
+    transform: translateY(-30px);
+    color: rgb(2, 233, 233);
+  }
+}
+
+.form__field {
+  margin-bottom: 15px;
+  padding: 15px;
+
+  outline: none;
+  border: 1px solid rgba(27, 27, 27, 0.12);
+  border-radius: 2px;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(2, 2, 2, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  &:hover,
+  &:focus {
+    border: 2px solid rgb(2, 233, 233);
+  }
+}
+
+// #label:focus-within .name_label {
+//   top: 222px;
+//   transform: translateY(-12220px);
+//   color: red;
+// }
