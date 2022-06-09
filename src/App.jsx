@@ -4,7 +4,6 @@
 // import Filter from './components/Filter/Filter';
 import PublicRoute from './Routes/PublicRoute.js';
 import PrivateRoute from './Routes/PrivateRoute.js';
-import { Routes } from 'react-router-dom';
 
 import HomeView from 'views/HomeView/HomeView.js';
 import RegisterView from 'views/RegisterView/RegisterView.js';
@@ -21,7 +20,8 @@ import { Footer } from './components/Footer/Footer';
 // import { updateUser } from './redux/auth/auth-operations';
 import { fetchContacts } from 'redux/contacts/contacts-operations';
 
-import { contactsLoading } from 'redux/contacts/contacts-selector';
+// import { contactsLoading } from 'redux/contacts/contacts-selector';
+
 import { getIsLoadingCurrent } from 'redux/auth/auth-selectors.js';
 
 import './index.css';
