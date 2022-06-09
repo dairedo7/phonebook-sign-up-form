@@ -1,0 +1,21 @@
+.box {
+  margin-left: auto;
+}
+
+.links {
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px;
+  font-weight: 600;
+  color: #000;
+  font-size: 22px;
+
+  &_active {
+    color: red;
+  }
+}

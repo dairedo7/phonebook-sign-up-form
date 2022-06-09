@@ -14,16 +14,12 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
+
 import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
 
-import contactReducer from './contacts/contacts-reducer';
+import { items, loading } from './contacts/contacts-reducer';
 import filterReducer from './filter/filter-reducer';
-import { loginName, loginNumber } from './contacts/contacts-reducer';
-
-const contactsPersistConfig = {
-  key: 'contacts',
-  storage,
-};
+import authSliceReducer from './auth/auth-slice';
 
 const middleware = [
   ...getDefaultMiddleware({
@@ -33,19 +29,31 @@ const middleware = [
   }),
 ];
 
-const rootReducer = combineReducers({
-  items: contactReducer,
-  filter: filterReducer,
-  loginName: loginName,
-  loginNumber: loginNumber,
-});
+const contactsPersistConfig = {
+  key: 'auth',
+  storage,
+  whitelist: ['token'],
+};
+
+// const rootReducer = combineReducers({
+//   items,
+//   filter: filterReducer,
+//   loading,
+// });
 
 export const store = configureStore({
   reducer: {
-    contacts: persistReducer(contactsPersistConfig, rootReducer),
+    auth: persistReducer(contactsPersistConfig, authSliceReducer),
+    contacts: combineReducers({
+      items,
+      filter: filterReducer,
+      loading,
+    }),
   },
   middleware,
   devTools: process.env.NODE_ENV === 'development',
 });
 
 export const persistor = persistStore(store); // wrapper for store to update the localStorage
+
+// fetch.then(x => dispatch(action(x))).catch(y => dispatch(action(y)));
