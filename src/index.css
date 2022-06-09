@@ -27,6 +27,12 @@ h2 {
   font-family: 'Times New Roman', Times, serif;
 }
 
+.loading {
+  text-align: center;
+  font-style: italic;
+  color: rgb(90, 216, 233);
+}
+
 .phonebook__title {
   color: rgb(98, 248, 248);
   font-size: 28px;
@@ -40,4 +46,14 @@ h2 {
 }
 .contacts__title:hover {
   color: rgb(2, 233, 233);
+}
+
+.visually_hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
