@@ -26,10 +26,9 @@ function reducer(state, action) {
 export default function LoginView() {
   const [state, setState] = useReducer(reducer, initialState);
   const dispatch = useDispatch();
-
+  console.log(state);
   const handleSubmit = e => {
     e.preventDefault();
-    console.log(state);
     dispatch(signIn(state));
   };
 
