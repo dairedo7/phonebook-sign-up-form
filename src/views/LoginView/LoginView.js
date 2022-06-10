@@ -29,6 +29,7 @@ export default function LoginView() {
 
   const handleSubmit = e => {
     e.preventDefault();
+    console.log(state);
     dispatch(signIn(state));
   };
 

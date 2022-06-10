@@ -12,6 +12,7 @@ import ContactsView from 'views/ContactsView/ContactsView.js';
 
 import { useEffect, Suspense } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Routes, Route } from 'react-router-dom';
 
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
@@ -45,18 +46,41 @@ export default function App() {
 
         <main style={{ padding: '20px 10px 20px 10px' }}>
           <Suspense fallback={<h1>Loading...</h1>}>
-            <PublicRoute exact path="/home">
-              <HomeView />
-            </PublicRoute>
-            <PublicRoute exact path="/register" restricted>
-              <RegisterView />
-            </PublicRoute>
-            <PublicRoute exact path="/login" restricted redirectTo="/contacts">
-              <LoginView />
-            </PublicRoute>
-            <PrivateRoute exact path="/contacts" redirectTo="/login">
-              <ContactsView />
-            </PrivateRoute>
+            <Routes path="*">
+              <Route path="/" element={<HomeView />}></Route>
+              <Route
+                path="/home/*"
+                element={
+                  <PublicRoute path="/*" restricted>
+                    <HomeView />
+                  </PublicRoute>
+                }
+              ></Route>
+              <Route
+                path="/register/*"
+                element={
+                  <PublicRoute path="/*" restricted>
+                    <RegisterView />
+                  </PublicRoute>
+                }
+              ></Route>
+              <Route
+                path="/login/*"
+                element={
+                  <PublicRoute path="/*" restricted redirectTo="/contacts">
+                    <LoginView />
+                  </PublicRoute>
+                }
+              ></Route>
+              <Route
+                path="/contacts/*"
+                element={
+                  <PrivateRoute path="/*" redirectTo="/login">
+                    <ContactsView />
+                  </PrivateRoute>
+                }
+              ></Route>
+            </Routes>
           </Suspense>
         </main>
 
