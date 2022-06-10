@@ -1,8 +1,8 @@
 {
-  "name": "react-phonebook-async-redux",
+  "name": "phonebook-sign-up-form",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dairedo7.github.io/react-phonebook-async-redux/",
+  "homepage": "https://dairedo7.github.io/react-phonebook-sign-up-form/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.2",
     "@testing-library/jest-dom": "^5.14.1",
