@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/react-phonebook-async-redux/static/css/main.5f6472cf.chunk.css",
-    "main.js": "/react-phonebook-async-redux/static/js/main.634b0df9.chunk.js",
-    "main.js.map": "/react-phonebook-async-redux/static/js/main.634b0df9.chunk.js.map",
-    "runtime-main.js": "/react-phonebook-async-redux/static/js/runtime-main.bf1af4d8.js",
-    "runtime-main.js.map": "/react-phonebook-async-redux/static/js/runtime-main.bf1af4d8.js.map",
-    "static/js/2.3e48742e.chunk.js": "/react-phonebook-async-redux/static/js/2.3e48742e.chunk.js",
-    "static/js/2.3e48742e.chunk.js.map": "/react-phonebook-async-redux/static/js/2.3e48742e.chunk.js.map",
-    "static/js/3.c08c9759.chunk.js": "/react-phonebook-async-redux/static/js/3.c08c9759.chunk.js",
-    "static/js/3.c08c9759.chunk.js.map": "/react-phonebook-async-redux/static/js/3.c08c9759.chunk.js.map",
-    "index.html": "/react-phonebook-async-redux/index.html",
-    "static/css/main.5f6472cf.chunk.css.map": "/react-phonebook-async-redux/static/css/main.5f6472cf.chunk.css.map",
-    "static/js/2.3e48742e.chunk.js.LICENSE.txt": "/react-phonebook-async-redux/static/js/2.3e48742e.chunk.js.LICENSE.txt"
+    "main.css": "/phonebook-sign-up-form/static/css/main.5f6472cf.chunk.css",
+    "main.js": "/phonebook-sign-up-form/static/js/main.675f1bb2.chunk.js",
+    "main.js.map": "/phonebook-sign-up-form/static/js/main.675f1bb2.chunk.js.map",
+    "runtime-main.js": "/phonebook-sign-up-form/static/js/runtime-main.7f64d1a4.js",
+    "runtime-main.js.map": "/phonebook-sign-up-form/static/js/runtime-main.7f64d1a4.js.map",
+    "static/js/2.17bc1b75.chunk.js": "/phonebook-sign-up-form/static/js/2.17bc1b75.chunk.js",
+    "static/js/2.17bc1b75.chunk.js.map": "/phonebook-sign-up-form/static/js/2.17bc1b75.chunk.js.map",
+    "static/js/3.85553df7.chunk.js": "/phonebook-sign-up-form/static/js/3.85553df7.chunk.js",
+    "static/js/3.85553df7.chunk.js.map": "/phonebook-sign-up-form/static/js/3.85553df7.chunk.js.map",
+    "index.html": "/phonebook-sign-up-form/index.html",
+    "static/css/main.5f6472cf.chunk.css.map": "/phonebook-sign-up-form/static/css/main.5f6472cf.chunk.css.map",
+    "static/js/2.17bc1b75.chunk.js.LICENSE.txt": "/phonebook-sign-up-form/static/js/2.17bc1b75.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.bf1af4d8.js",
-    "static/js/2.3e48742e.chunk.js",
+    "static/js/runtime-main.7f64d1a4.js",
+    "static/js/2.17bc1b75.chunk.js",
     "static/css/main.5f6472cf.chunk.css",
-    "static/js/main.634b0df9.chunk.js"
+    "static/js/main.675f1bb2.chunk.js"
   ]
 }
