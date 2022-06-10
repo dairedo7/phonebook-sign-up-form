@@ -12,7 +12,7 @@ import ContactsView from 'views/ContactsView/ContactsView.js';
 
 import { useEffect, Suspense } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
@@ -46,7 +46,7 @@ export default function App() {
 
         <main style={{ padding: '20px 10px 20px 10px' }}>
           <Suspense fallback={<h1>Loading...</h1>}>
-            <Routes path="*">
+            <Routes>
               <Route path="/" element={<HomeView />}></Route>
               <Route
                 path="/home/*"
@@ -80,6 +80,7 @@ export default function App() {
                   </PrivateRoute>
                 }
               ></Route>
+              <Route path="*" element={<Navigate to="/" />}></Route>
             </Routes>
           </Suspense>
         </main>
