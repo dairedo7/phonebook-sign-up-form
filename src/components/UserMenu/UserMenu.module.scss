@@ -1,4 +1,6 @@
 .box {
+  display: flex;
+  flex-direction: column;
   margin-left: auto;
 }
 
@@ -8,18 +10,28 @@
 }
 
 .btn {
-  padding: 3px 8px 3px 8px;
+  display: block;
+  margin: 0 auto;
+  padding: 7px 14px;
+  background-color: transparent;
+  color: #000;
+  border: 1px solid grey;
+  border: 1px solid grey;
+  border-radius: 6px;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  transform: scale(1);
+  transition-property: background, color, transform;
+  transition-timing-function: ease-in-out;
+  transition-duration: 350ms;
+}
 
-  font-weight: 400;
-  font-size: 11px;
+.btn:hover {
+  transform: scale(1.1);
+  color: #fff;
+  background-color: rgb(21, 75, 223);
+}
 
-  border-radius: 5px;
-  border: 1px solid rgb(206, 205, 205);
-  background-color: #fff;
-
-  &:hover,
-  &:focus {
-    background-color: #99c2f8;
-  }
+.btn:active {
+  background-color: rgb(108, 143, 238);
 }
