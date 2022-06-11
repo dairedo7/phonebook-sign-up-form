@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/phonebook-sign-up-form/static/css/main.5f6472cf.chunk.css",
-    "main.js": "/phonebook-sign-up-form/static/js/main.70000128.chunk.js",
-    "main.js.map": "/phonebook-sign-up-form/static/js/main.70000128.chunk.js.map",
+    "main.css": "/phonebook-sign-up-form/static/css/main.d30642dc.chunk.css",
+    "main.js": "/phonebook-sign-up-form/static/js/main.edb8df34.chunk.js",
+    "main.js.map": "/phonebook-sign-up-form/static/js/main.edb8df34.chunk.js.map",
     "runtime-main.js": "/phonebook-sign-up-form/static/js/runtime-main.7f64d1a4.js",
     "runtime-main.js.map": "/phonebook-sign-up-form/static/js/runtime-main.7f64d1a4.js.map",
     "static/js/2.17bc1b75.chunk.js": "/phonebook-sign-up-form/static/js/2.17bc1b75.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.85553df7.chunk.js": "/phonebook-sign-up-form/static/js/3.85553df7.chunk.js",
     "static/js/3.85553df7.chunk.js.map": "/phonebook-sign-up-form/static/js/3.85553df7.chunk.js.map",
     "index.html": "/phonebook-sign-up-form/index.html",
-    "static/css/main.5f6472cf.chunk.css.map": "/phonebook-sign-up-form/static/css/main.5f6472cf.chunk.css.map",
+    "static/css/main.d30642dc.chunk.css.map": "/phonebook-sign-up-form/static/css/main.d30642dc.chunk.css.map",
     "static/js/2.17bc1b75.chunk.js.LICENSE.txt": "/phonebook-sign-up-form/static/js/2.17bc1b75.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7f64d1a4.js",
     "static/js/2.17bc1b75.chunk.js",
-    "static/css/main.5f6472cf.chunk.css",
-    "static/js/main.70000128.chunk.js"
+    "static/css/main.d30642dc.chunk.css",
+    "static/js/main.edb8df34.chunk.js"
   ]
 }
