@@ -27,6 +27,15 @@ h2 {
   font-family: 'Times New Roman', Times, serif;
 }
 
+a {
+  text-decoration: none;
+}
+
+.main {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 .loading {
   text-align: center;
   font-style: italic;

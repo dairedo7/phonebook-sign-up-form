@@ -26,9 +26,11 @@ function reducer(state, action) {
 export default function LoginView() {
   const [state, setState] = useReducer(reducer, initialState);
   const dispatch = useDispatch();
-  console.log(state);
+  const { email, password } = state;
+  // console.log(state);
   const handleSubmit = e => {
     e.preventDefault();
+    // console.log(state);
     dispatch(signIn(state));
   };
 
@@ -40,7 +42,7 @@ export default function LoginView() {
           className={styles.form__field}
           type="text"
           name="email"
-          value={state.email}
+          value={email}
           pattern="[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*"
           title="Please check the entered data is correct."
           placeholder=" "
@@ -56,7 +58,7 @@ export default function LoginView() {
           className={styles.form__field}
           type="password"
           name="password"
-          value={state.password}
+          value={password}
           placeholder=" "
           onChange={e =>
             setState({ type: e.target.name, payload: e.target.value })

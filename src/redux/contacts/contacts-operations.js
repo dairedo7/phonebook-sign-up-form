@@ -34,23 +34,3 @@ export const deleteContact = createAsyncThunk(
     return id;
   }
 );
-
-// import {
-//   addContactsRequest,
-//   addContactsSuccess,
-//   addContactsError,
-// } from './contacts-actions';
-
-// export const addContact = data => dispatch => {
-//   const contact = {
-//     data,
-//     completed: false,
-//   };
-
-//   dispatch(addContactsRequest());
-
-//   axios
-//     .post('/contacts', contact)
-//     .then(({ data }) => dispatch(addContactsSuccess(data)))
-//     .catch(error => dispatch(addContactsError(error)));
-// };

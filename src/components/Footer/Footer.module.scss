@@ -1,8 +1,26 @@
 .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 30px 15px;
   border-top: 1px solid #e1e1e1;
-}
 
-.border {
-  text-align: center;
+  &__signature {
+    text-align: center;
+    font-style: italic;
+    margin-right: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__link {
+    color: #000;
+    font-style: italic;
+    transition: color 250ms ease-in;
+
+    &:hover,
+    &:focus {
+      color: #02e9e9;
+    }
+  }
 }
