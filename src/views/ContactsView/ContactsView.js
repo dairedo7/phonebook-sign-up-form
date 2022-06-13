@@ -8,7 +8,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import Filter from '../../components/Filter/Filter';
 import { getContacts } from 'redux/contacts/contacts-selector';
 import { addContact } from 'redux/contacts/contacts-operations';
-// import s from './ContactsView.module.scss';
 
 export default function ContactsView() {
   const contacts = useSelector(getContacts);

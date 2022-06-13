@@ -7,15 +7,13 @@ export function AuthNav() {
     <div className={styles.box}>
       <NavLink
         to="/register"
-        className={styles.link}
-        activeclassname={styles.link_active}
+        className={({ isActive }) => (isActive ? 'link__active link' : 'link')}
       >
         Register
       </NavLink>
       <NavLink
         to="/login"
-        className={styles.link}
-        activeclassname={styles.link_active}
+        className={({ isActive }) => (isActive ? 'link__active link' : 'link')}
       >
         Login
       </NavLink>

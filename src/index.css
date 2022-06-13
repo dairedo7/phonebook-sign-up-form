@@ -66,3 +66,16 @@ a {
   white-space: nowrap;
   width: 1px;
 }
+
+/* Nav Links Styles */
+.link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px;
+  font-weight: 600;
+  color: #000;
+  font-size: 22px;
+}
+.link__active {
+  color: #02e9e9;
+}

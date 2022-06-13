@@ -49,7 +49,7 @@ export default function App() {
               <Route
                 path="/home/*"
                 element={
-                  <PublicRoute path="/*" restricted>
+                  <PublicRoute path="/">
                     <HomeView />
                   </PublicRoute>
                 }
