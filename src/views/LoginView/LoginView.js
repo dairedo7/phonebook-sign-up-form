@@ -63,6 +63,7 @@ export default function LoginView() {
             className={styles.form__field}
             type="text"
             name="email"
+            autoComplete="on"
             value={email}
             pattern="[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*"
             title="Please check the entered data is correct."
@@ -79,6 +80,7 @@ export default function LoginView() {
             className={styles.form__field}
             type="password"
             name="password"
+            autoComplete="on"
             value={password}
             placeholder=" "
             onChange={e =>

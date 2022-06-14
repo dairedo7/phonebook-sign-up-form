@@ -23,7 +23,7 @@ export const register = createAsyncThunk(
 
       return data;
     } catch (error) {
-      return rejectWithValue(error);
+      return rejectWithValue(error.message);
     }
   }
 );
@@ -58,6 +58,7 @@ export const updateUser = createAsyncThunk(
   async (_, { getState, rejectWithValue }) => {
     const state = getState();
     const persistedToken = state.auth.token;
+    console.log(persistedToken);
 
     if (!persistedToken) {
       return rejectWithValue();
