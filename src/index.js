@@ -11,7 +11,7 @@ import './index.css';
 ReactDOM.render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
-      <BrowserRouter>
+      <BrowserRouter basename="/phonebook-sign-up-form/">
         <App />
       </BrowserRouter>
     </PersistGate>
