@@ -45,7 +45,6 @@ export default function App() {
         <main className="main">
           <Suspense fallback={<h1>Loading...</h1>}>
             <Routes>
-              <Route path="/" element={<HomeView />}></Route>
               <Route
                 path="/home/*"
                 element={
@@ -81,7 +80,7 @@ export default function App() {
               <Route
                 path="*"
                 element={
-                  auth ? <Navigate to="/contacts" /> : <Navigate to="/" />
+                  auth ? <Navigate to="/contacts" /> : <Navigate to="/home" />
                 }
               ></Route>
             </Routes>

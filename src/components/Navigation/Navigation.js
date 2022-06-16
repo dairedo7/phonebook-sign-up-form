@@ -24,6 +24,10 @@ export default function Navigation() {
           Contacts
         </NavLink>
       )}
+      <NavLink
+        to="*"
+        className={({ isActive }) => (isActive ? 'link__active link' : 'link')}
+      ></NavLink>
     </nav>
   );
 }

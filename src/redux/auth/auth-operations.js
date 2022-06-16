@@ -33,7 +33,9 @@ export const signIn = createAsyncThunk(
   async (credentials, { rejectWithValue }) => {
     try {
       const { data } = await axios.post('/users/login', credentials);
+
       token.set(data.token);
+      console.log(credentials, token);
       return data;
     } catch (error) {
       return rejectWithValue(error.message);
