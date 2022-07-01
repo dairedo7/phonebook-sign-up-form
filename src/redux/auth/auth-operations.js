@@ -36,12 +36,12 @@ export const register = createAsyncThunk(
 export const signIn = createAsyncThunk(
   'auth/login',
   async (credentials, { rejectWithValue }) => {
-    console.log(credentials, token);
+    // console.log(credentials, token);
     try {
       const { data } = await axios.post('/users/login', credentials);
 
       token.set(data.token);
-      console.log(credentials, token);
+      // console.log(credentials, token);
       return data;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -66,7 +66,7 @@ export const updateUser = createAsyncThunk(
   async (_, { getState, rejectWithValue }) => {
     const state = getState();
     const persistedToken = state.auth.token;
-    console.log(persistedToken);
+    // console.log(persistedToken);
 
     if (!persistedToken) {
       return rejectWithValue();
@@ -75,6 +75,7 @@ export const updateUser = createAsyncThunk(
       token.set(persistedToken);
 
       const { data } = await axios.get('/users/current');
+
       return data;
     } catch (error) {
       return rejectWithValue(error.message);

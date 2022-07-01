@@ -2,11 +2,13 @@ import './index.css';
 import { useEffect, Suspense, lazy } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Routes, Route, Navigate } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
 
 import { fetchContacts } from 'redux/contacts/contacts-operations';
+import { updateUser } from 'redux/auth/auth-operations';
 
 // import { contactsLoading } from 'redux/contacts/contacts-selector';
 
@@ -27,7 +29,7 @@ const ContactsView = lazy(() => import('./views/ContactsView/ContactsView'));
 // import titleAppearing from './titleAppearing.module.css';
 // import phonebookAppearing from './phonebookAppearing.module.css';
 
-export default function App() {
+function App({ getCurrentUser }) {
   const dispatch = useDispatch();
   // const loading = useSelector(contactsLoading);
   const isLoadingCurrentUser = useSelector(getIsLoadingCurrent);
@@ -35,7 +37,8 @@ export default function App() {
 
   useEffect(() => {
     dispatch(fetchContacts());
-  }, [dispatch]);
+    getCurrentUser();
+  }, [dispatch, getCurrentUser]);
 
   return (
     !isLoadingCurrentUser && (
@@ -92,3 +95,9 @@ export default function App() {
     )
   );
 }
+
+const mapDispatchToProps = {
+  getCurrentUser: updateUser,
+};
+
+export default connect(null, mapDispatchToProps)(App);

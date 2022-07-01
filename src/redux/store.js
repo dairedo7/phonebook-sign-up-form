@@ -30,6 +30,7 @@ const middleware = [
   }),
 ];
 
+//Configuration of persistor
 const contactsPersistConfig = {
   key: 'auth',
   storage,
@@ -42,6 +43,7 @@ const contactsPersistConfig = {
 //   loading,
 // });
 
+//The storage: the rootReducer + devTools for dev only
 export const store = configureStore({
   reducer: {
     auth: persistReducer(contactsPersistConfig, authSlice),
