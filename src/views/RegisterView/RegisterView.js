@@ -46,7 +46,6 @@ export default function RegisterView() {
           type="text"
           name="name"
           value={state.name}
-          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Please check if the data you entered is valid."
           placeholder=" "
           onChange={e =>

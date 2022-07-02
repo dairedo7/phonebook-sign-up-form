@@ -6,13 +6,9 @@ import { useSelector } from 'react-redux';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import { findContactsByQuery } from 'redux/contacts/contacts-selector';
-// import { defaultContacts } from 'redux/contacts/contacts-selector';
 
 export default function ContactList() {
   const contacts = useSelector(findContactsByQuery);
-
-  // const defContacts = useSelector(defaultContacts);
-  // const onDeleteClick = id => dispatch(deleteContact(id));
 
   return (
     <TransitionGroup component="ul" className={styles.list}>

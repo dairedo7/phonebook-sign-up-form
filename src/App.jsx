@@ -1,13 +1,12 @@
 import './index.css';
 import { useEffect, Suspense, lazy } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
 
-import { fetchContacts } from 'redux/contacts/contacts-operations';
 import { updateUser } from 'redux/auth/auth-operations';
 
 // import { contactsLoading } from 'redux/contacts/contacts-selector';
@@ -30,15 +29,13 @@ const ContactsView = lazy(() => import('./views/ContactsView/ContactsView'));
 // import phonebookAppearing from './phonebookAppearing.module.css';
 
 function App({ getCurrentUser }) {
-  const dispatch = useDispatch();
   // const loading = useSelector(contactsLoading);
   const isLoadingCurrentUser = useSelector(getIsLoadingCurrent);
   const auth = useSelector(state => state.auth.isLoggedIn);
 
   useEffect(() => {
-    dispatch(fetchContacts());
     getCurrentUser();
-  }, [dispatch, getCurrentUser]);
+  }, [getCurrentUser]);
 
   return (
     !isLoadingCurrentUser && (

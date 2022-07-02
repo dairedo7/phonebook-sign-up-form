@@ -79,7 +79,3 @@ function ContactForm({ changeContactsState }) {
 ContactForm.propTypes = { changeContactsState: PropTypes.func.isRequired };
 
 export default ContactForm;
-
-ContactForm.propTypes = {
-  changeContactsState: PropTypes.func.isRequired,
-};

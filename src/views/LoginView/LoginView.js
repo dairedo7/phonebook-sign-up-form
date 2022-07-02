@@ -37,19 +37,18 @@ export default function LoginView() {
   const handleSubmit = e => {
     e.preventDefault();
     // console.log(state);
-
     dispatch(signIn(state));
-    if (!isLoggedIn) {
+    if (isLoggedIn) {
+      toast.success('You have succesfully logged in!', {
+        theme: 'colored',
+      });
+    } else {
       toast.error(
         'Request failed with status code 400. Check your email and password!',
         {
           theme: 'colored',
         }
       );
-    } else {
-      toast.success('You have succesfully logged in!', {
-        theme: 'colored',
-      });
     }
   };
 
