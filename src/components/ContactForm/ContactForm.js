@@ -4,11 +4,11 @@ import { useState } from 'react';
 
 function ContactForm({ changeContactsState }) {
   const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
+  const [number, setNumber] = useState('');
 
   const resetForm = () => {
     setName('');
-    setPhone('');
+    setNumber('');
   };
 
   // const dispatch = useDispatch();
@@ -18,7 +18,7 @@ function ContactForm({ changeContactsState }) {
 
     const contact = {
       name,
-      phone,
+      number,
     };
 
     changeContactsState(contact);
@@ -31,8 +31,8 @@ function ContactForm({ changeContactsState }) {
     if (name === 'name') {
       setName(value);
     }
-    if (name === 'phone') {
-      setPhone(value);
+    if (name === 'number') {
+      setNumber(value);
     }
   };
 
@@ -59,11 +59,11 @@ function ContactForm({ changeContactsState }) {
           className={styles.form__field}
           type="tel"
           id="number"
-          name="phone"
+          name="number"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           placeholder=" "
-          value={phone}
+          value={number}
           onChange={handleChange}
           required
         />

@@ -21,7 +21,7 @@ function ContactsView() {
     fetchContacts();
   }, []);
 
-  const updateContacts = ({ name, phone }) => {
+  const updateContacts = ({ name, number }) => {
     if (
       contacts.find(
         contact => contact.name.toLowerCase() === name.toLowerCase()
@@ -31,7 +31,7 @@ function ContactsView() {
         theme: 'colored',
       });
     } else {
-      dispatch(addContact({ name, phone }));
+      dispatch(addContact({ name, number }));
       toast.success('New contact was added!', { theme: 'colored' });
     }
   };

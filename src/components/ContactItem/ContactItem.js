@@ -8,8 +8,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function ContactItem({ contact }) {
-  const { name, phone, id } = contact;
-
+  const { name, number, id } = contact;
   const dispatch = useDispatch();
 
   const onDeleteClick = id => {
@@ -21,7 +20,7 @@ export default function ContactItem({ contact }) {
       <ToastContainer autoClose={2000} />
       <li key={id} className={styles.contact__item}>
         <span className={styles.contact__text}>
-          {name}: {phone}
+          {name}: {number}
         </span>
         <button
           className={styles.delete__btn}
@@ -38,6 +37,6 @@ ContactItem.propTypes = {
   contact: PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    phone: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired,
   }),
 };

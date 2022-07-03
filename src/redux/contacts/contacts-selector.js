@@ -8,8 +8,8 @@ export const findContactsByQuery = state => {
   const nameToFilter = getFilterVal(state);
 
   return contacts.filter(
-    ({ name, phone }) =>
+    ({ name, number }) =>
       name.toLowerCase().includes(nameToFilter.toLowerCase()) ||
-      phone.includes(nameToFilter)
+      number.includes(nameToFilter)
   );
 };
