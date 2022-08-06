@@ -4,9 +4,12 @@
   font-family: 'Roboto', Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   text-align: center;
-  font-size: 60px;
-
+  font-size: 48px;
   color: #02e9e9;
+
+  @media screen and (min-width: 768px) {
+    font-size: 60px;
+  }
 }
 
 .subtitle {
@@ -20,8 +23,12 @@
   margin-top: 0;
   margin-bottom: 25px;
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
   font-style: italic;
+
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+  }
 }
 
 .container {

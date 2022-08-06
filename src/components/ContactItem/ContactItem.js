@@ -6,10 +6,15 @@ import { useDispatch } from 'react-redux';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useEffect } from 'react';
 
 export default function ContactItem({ contact }) {
   const { name, number, id } = contact;
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(deleteContact());
+  }, [dispatch]);
 
   const onDeleteClick = id => {
     dispatch(deleteContact(id));
